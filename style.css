@@ -25,3 +25,18 @@
     height: 50px;
     width: 50px;
 }
+
+.obstacleUp {
+    background-color: rgb(0, 149, 0);
+    height: 200px;
+    width: 50px;
+    position: absolute;
+}
+
+.obstacleDown {
+    background-color: rgb(0, 149, 0);
+    height: 200px;
+    width: 50px;
+    top:400px;
+    position: absolute;
+}
