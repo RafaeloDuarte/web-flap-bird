@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
         bird.style.bottom = birdBottom + 'px'
         bird.style.left = birdLeft+'px'
 		birdBorder = birdLeft+50
-		if((birdBorder === obstacleLeft && birdBottom<200)
+		if((birdBorder === obstacleLeft && (birdBottom<200 || birdBottom>330))
 			|| (birdBorder === obstacleLeft+50 && birdBottom<200)
-			|| (birdBorder === obstacleLeft && birdBottom>330)
+
 			|| birdBottom === 50) {
 			reload()
 		}
