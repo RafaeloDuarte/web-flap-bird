@@ -7,23 +7,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let birdLeft = 220
     let birdBottom = 300
-    let obstacleLeft = 450
+    let obstacleLeft = 400
+	let groundBase = 500
     let gravity = 2
 
     function startGame(){
         if(birdBottom > 0) birdBottom -= gravity
         bird.style.bottom = birdBottom + 'px'
         bird.style.left = birdLeft+'px'
+		birdBorder = birdLeft+50
+		if((birdBorder === obstacleLeft && birdBottom<200)
+			|| (birdBorder === obstacleLeft+50 && birdBottom<200)
+			|| (birdBorder === obstacleLeft && birdBottom>330)
+			|| birdBottom === 50) {
+			reload()
+		}
+		
         obstacleMovement()
     }
     let timerId = setInterval(startGame, 20)
+	
+	function reload(){
+		alert('Perdeu')
+		window.location.reload()
+	}
 
     function control (e){
         if(e.keyCode === 32){
             jump()
         }
     }
-
+	
     function obstacleMovement(){
         if(obstacleLeft > -60) obstacleLeft -= gravity
         else obstacleLeft = 450
