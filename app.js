@@ -4,12 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const bird = document.querySelector('.bird')
     const obstacleUp = document.querySelector('.obstacleUp')
     const obstacleDown = document.querySelector('.obstacleDown')
+	const displayText = document.getElementById('score')
 
     let birdLeft = 220
     let birdBottom = 300
     let obstacleLeft = 400
 	let groundBase = 500
     let gravity = 2
+	let score = 0
+			displayText.value = score
 
     function startGame(){
         if(birdBottom > 0) birdBottom -= gravity
@@ -18,11 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		birdBorder = birdLeft+50
 		if((birdBorder === obstacleLeft && (birdBottom<200 || birdBottom>330))
 			|| (birdBorder === obstacleLeft+50 && birdBottom<200)
-
 			|| birdBottom === 50) {
 			reload()
 		}
-		
+
+	
         obstacleMovement()
     }
     let timerId = setInterval(startGame, 20)

@@ -40,3 +40,10 @@
     top:400px;
     position: absolute;
 }
+
+.display{
+    background-color: #ebfff9;
+    height: 50px;
+    width: 500px;
+    position: absolute;	
+}
