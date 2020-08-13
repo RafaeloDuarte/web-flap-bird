@@ -4,8 +4,13 @@
     position: absolute;
 }
 
+.game-container img{
+    widows: 500px;
+    height: 680px;
+    position: fixed;
+}
+
 .sky{
-    background-color: lightblue;
     width: 500px;
     height: 580px;
     position: absolute;
@@ -20,30 +25,42 @@
 }
 
 .bird{
-    background-color: yellow;
     position: absolute;
-    height: 50px;
-    width: 50px;
+	height: 60px;
+    width: 60px;
+}
+.bird img{
+    height: 70px;
+    width: 70px;
 }
 
 .obstacleUp {
-    background-color: rgb(0, 149, 0);
-    height: 200px;
-    width: 50px;
     position: absolute;
 }
 
+.obstacleUp img {
+    height: 200px;
+    width: 50px;
+    transform: scaleX(-1);
+}
+
 .obstacleDown {
-    background-color: rgb(0, 149, 0);
     height: 200px;
     width: 50px;
     top:400px;
     position: absolute;
 }
 
+.obstacleDown img{
+    height: 200px;
+    width: 50px;
+}
+
 .display{
     background-color: #ebfff9;
     height: 50px;
     width: 500px;
-    position: absolute;	
+    position: absolute;
+	display: flex;
+	align-content: center;
 }
