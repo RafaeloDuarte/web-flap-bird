@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	let score = 0
 	let timer = 0
 	let condition = true
+	
 
     function startGame(){
         if(birdBottom > 0) birdBottom -= gravity

@@ -45,14 +45,12 @@
 }
 
 .obstacleDown {
-    height: 200px;
-    width: 50px;
     top:400px;
     position: absolute;
 }
 
 .obstacleDown img{
-    height: 200px;
+    height: 180px;
     width: 50px;
 }
 
