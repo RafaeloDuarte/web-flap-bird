@@ -1,11 +1,11 @@
 .game-container{
-    widows: 500px;
+    width: 500px;
     height: 730px;
     position: absolute;
 }
 
 .game-container img{
-    widows: 500px;
+    width: 500px;
     height: 680px;
     position: fixed;
 }
@@ -62,5 +62,10 @@
     width: 500px;
     position: absolute;
 	display: flex;
-	align-content: center;
+	font-family:Calibri;
+}
+
+.display h1{
+	align-self: center;
+	justify-content: center;
 }
