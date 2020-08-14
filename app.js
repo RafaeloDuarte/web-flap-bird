@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	let score = 0
 	let timer = 0
 	let condition = true
-	
+	let hardest = 2
 
     function startGame(){
         if(birdBottom > 0) birdBottom -= gravity
@@ -36,10 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
 			condition = true
 			obstacleRigth = 0
 		}
+		difficulty()
 		displayText.innerHTML = score
         obstacleMovement()
     }
     let timerId = setInterval(startGame, 20)
+	
+	function difficulty(){
+		if(score > hardest){
+			gravity++
+			hardest+=2
+		}
+	}
 	
 	function reload(){
 		alert('Perdeu')
